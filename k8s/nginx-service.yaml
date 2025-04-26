@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+spec:
+  type: LoadBalancer  # To expose it outside via AWS ELB
+  selector:
+    app: nginx
+  ports:
+  - port: 80
+    targetPort: 80
