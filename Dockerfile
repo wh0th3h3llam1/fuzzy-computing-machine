@@ -6,7 +6,7 @@ COPY . /app
 
 RUN apt-get -y update --fix-missing
 RUN apt-get -y install libcurl4-openssl-dev libssl-dev software-properties-common python3-launchpadlib
-RUN pip install -r requirements.txt
+RUN pip install -r app/requirements.txt
 
 # setting env
 ENV PYTHONUNBUFFERED=1

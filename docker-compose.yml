@@ -21,9 +21,9 @@ services:
       - DEBUG=False
       - SECRET_KEY=b41650f9-2139-4824-863c-c252cf0ead5a
       - DB_NAME=restro
-      - DB_USER=restro
-      - DB_PASSWORD=password
-      - DB_HOST=restro.aarsheth.com
+      - DB_USER=postgres
+      - DB_PASSWORD=#cbY*a[W:>Q>dHfqaxHE5yZ~0M#.
+      - DB_HOST=us-east-db-1.cmnosc3kq45v.us-east-1.rds.amazonaws.com
       - DB_PORT=5432
 
   nginx:
