@@ -1,12 +1,11 @@
-FROM python:3.12
+FROM python:3.12-alpine
 
 RUN mkdir /app
 WORKDIR /app
 COPY . /app
 
-RUN apt-get -y update --fix-missing
 RUN apt-get -y install libcurl4-openssl-dev libssl-dev software-properties-common python3-launchpadlib
-RUN pip install -r app/requirements.txt
+RUN pip install --upgrade pip && pip install -r app/requirements.txt && pip install gunicorn
 
 # setting env
 ENV PYTHONUNBUFFERED=1
